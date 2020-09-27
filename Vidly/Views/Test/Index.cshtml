@@ -1,0 +1,22 @@
+﻿@*@model Vidly.Models.Test*@
+@{
+	/**/
+
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employees</h2>
+
+@foreach (var emp in ViewBag.Tests)
+{
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h3>@emp.Name</h3>
+			<p>@emp.occupation</p>
+		</div>
+	</div>
+
+
+}
+
