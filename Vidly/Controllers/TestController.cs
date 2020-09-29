@@ -5,15 +5,17 @@ using Vidly.Models;
 
 namespace Vidly.Controllers
 {
+
     public class TestController : Controller
     {
         // GET: Test
-
+        private DataClasses1DataContext dc = new DataClasses1DataContext();
         private MyDbContext _context;
 
         public TestController()
         {
             _context = new MyDbContext();
+
         }
 
         protected override void Dispose(bool disposing)
@@ -28,7 +30,7 @@ namespace Vidly.Controllers
 
             ViewBag.Tests = testData;
 
-            return View();
+            return View(testData);
         }
     }
 }

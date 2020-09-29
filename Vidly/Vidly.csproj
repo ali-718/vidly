@@ -55,6 +55,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -167,8 +168,21 @@
     <Compile Include="Migrations\202009271945147_AddingTestTable2.designer.cs">
       <DependentUpon>202009271945147_AddingTestTable2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009291733271_MemberShipTypeUpdate.cs" />
+    <Compile Include="Migrations\202009291733271_MemberShipTypeUpdate.designer.cs">
+      <DependentUpon>202009291733271_MemberShipTypeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009291736073_updateMembershipNames.cs" />
+    <Compile Include="Migrations\202009291736073_updateMembershipNames.designer.cs">
+      <DependentUpon>202009291736073_updateMembershipNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -191,6 +205,14 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -266,6 +288,15 @@
     <EmbeddedResource Include="Migrations\202009271945147_AddingTestTable2.resx">
       <DependentUpon>202009271945147_AddingTestTable2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009291733271_MemberShipTypeUpdate.resx">
+      <DependentUpon>202009291733271_MemberShipTypeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009291736073_updateMembershipNames.resx">
+      <DependentUpon>202009291736073_updateMembershipNames.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

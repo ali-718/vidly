@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
-using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -17,13 +16,13 @@ namespace Vidly.Controllers
                 new Customer { Name = "Customer 2" }
             };
 
-            RandomMovieViewModel viewModel = new RandomMovieViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
+            //RandomMovieViewModel viewModel = new RandomMovieViewModel
+            //{
+            //    Movie = movie,
+            //    Customers = customers
+            //};
 
-            return View(viewModel);
+            return View();
         }
     }
 }
