@@ -1,8 +1,13 @@
-﻿@model Vidly.Models.Customer
+﻿@*@model Vidly.Models.Customer*@
 
 @{
-	ViewBag.Title = Model.Name;
+	ViewBag.Title = ViewBag.Data.Name;
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+<h2>@ViewBag.Data.Name</h2>
+@if (ViewBag.Data.birthDate != null)
+{
+	
+	<h2>@ViewBag.Data.birthDate</h2>
+}

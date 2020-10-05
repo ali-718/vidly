@@ -16,6 +16,11 @@ namespace Vidly.Controllers
             _context = new MyDbContext();
         }
 
+        public ActionResult New()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
@@ -39,7 +44,9 @@ namespace Vidly.Controllers
                 return HttpNotFound();
             }
 
-            return View(customer);
+            ViewBag.Data = customer;
+
+            return View();
         }
 
 

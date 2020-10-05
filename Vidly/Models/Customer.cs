@@ -14,5 +14,6 @@ namespace Vidly.Models
         public MembershipType MembershipType { get; set; }
         public byte MemberShipTypeId { get; set; }
         public Test TestTable { get; set; }
+        public string birthDate { get; set; }
     }
 }
