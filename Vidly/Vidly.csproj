@@ -197,6 +197,7 @@
     <Compile Include="Models\personal.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NewCustomerViewModels.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>

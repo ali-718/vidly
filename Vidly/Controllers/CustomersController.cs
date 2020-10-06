@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -18,7 +19,13 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
-            return View();
+            IEnumerable<MembershipType> memberShipTypes = _context.MembershipTypes.ToList();
+            NewCustomerViewModels viewModel = new NewCustomerViewModels
+            {
+                MembershipTypes = memberShipTypes
+            };
+
+            return View(viewModel);
         }
 
         protected override void Dispose(bool disposing)
